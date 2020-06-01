@@ -11,6 +11,11 @@ public class Dropdown {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://formy-project.herokuapp.com/dropdown");
+        WebElement dropDown = driver.findElement(By.id("dropdownMenuButton"));
+        dropDown.click();
+
+        WebElement autocompleteOption = driver.findElement(By.id("autocomplete"));
+        autocompleteOption.click();
 
         driver.quit();
     }
